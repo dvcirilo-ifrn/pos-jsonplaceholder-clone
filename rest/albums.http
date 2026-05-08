@@ -1,0 +1,39 @@
+@baseUrl = http://localhost:8000
+
+### Listar todos os álbuns
+GET {{baseUrl}}/albums/
+
+### Buscar álbum por ID
+GET {{baseUrl}}/albums/1/
+
+### Criar álbum
+POST {{baseUrl}}/albums/
+Content-Type: application/json
+
+{
+  "user": 1,
+  "title": "Fotos de viagem"
+}
+
+### Atualizar álbum (completo)
+PUT {{baseUrl}}/albums/1/
+Content-Type: application/json
+
+{
+  "user": 1,
+  "title": "Título do álbum atualizado"
+}
+
+### Atualizar álbum (parcial)
+PATCH {{baseUrl}}/albums/1/
+Content-Type: application/json
+
+{
+  "title": "Novo título"
+}
+
+### Deletar álbum
+DELETE {{baseUrl}}/albums/1/
+
+### Fotos do álbum
+GET {{baseUrl}}/albums/1/photos/

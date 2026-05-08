@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:8000
+
+### Listar todos os comentários
+GET {{baseUrl}}/comments/
+
+### Buscar comentário por ID
+GET {{baseUrl}}/comments/1/
+
+### Criar comentário
+POST {{baseUrl}}/comments/
+Content-Type: application/json
+
+{
+  "post": 1,
+  "name": "João Costa",
+  "email": "joao@example.com",
+  "body": "Ótimo post! Muito esclarecedor."
+}
+
+### Atualizar comentário (completo)
+PUT {{baseUrl}}/comments/1/
+Content-Type: application/json
+
+{
+  "post": 1,
+  "name": "Nome Atualizado",
+  "email": "novo@email.com",
+  "body": "Comentário completamente reescrito."
+}
+
+### Atualizar comentário (parcial)
+PATCH {{baseUrl}}/comments/1/
+Content-Type: application/json
+
+{
+  "body": "Só o texto do comentário mudou."
+}
+
+### Deletar comentário
+DELETE {{baseUrl}}/comments/1/

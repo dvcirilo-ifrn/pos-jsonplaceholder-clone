@@ -1,0 +1,38 @@
+@baseUrl = http://localhost:8000
+
+### Listar todas as tarefas
+GET {{baseUrl}}/todos/
+
+### Buscar tarefa por ID
+GET {{baseUrl}}/todos/1/
+
+### Criar tarefa
+POST {{baseUrl}}/todos/
+Content-Type: application/json
+
+{
+  "user": 1,
+  "title": "Estudar REST APIs",
+  "completed": false
+}
+
+### Atualizar tarefa (completo)
+PUT {{baseUrl}}/todos/1/
+Content-Type: application/json
+
+{
+  "user": 1,
+  "title": "Tarefa atualizada",
+  "completed": true
+}
+
+### Marcar como concluída (parcial)
+PATCH {{baseUrl}}/todos/1/
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### Deletar tarefa
+DELETE {{baseUrl}}/todos/1/

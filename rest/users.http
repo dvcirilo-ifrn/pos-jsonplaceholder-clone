@@ -1,0 +1,75 @@
+@baseUrl = http://localhost:8000
+
+### Listar todos os usuários
+GET {{baseUrl}}/users/
+
+### Buscar usuário por ID
+GET {{baseUrl}}/users/1/
+
+### Criar usuário
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "name": "Maria Silva",
+  "username": "mariasilva",
+  "email": "maria@example.com",
+  "phone": "11 99999-0000",
+  "website": "maria.dev",
+  "address": {
+    "street": "Rua das Flores",
+    "suite": "Apto 42",
+    "city": "São Paulo",
+    "zipcode": "01310-100",
+    "geo": { "lat": "-23.5505", "lng": "-46.6333" }
+  },
+  "company": {
+    "name": "Silva Tech",
+    "catchPhrase": "Inovação que funciona",
+    "bs": "soluções digitais"
+  }
+}
+
+### Atualizar usuário (completo)
+PUT {{baseUrl}}/users/1/
+Content-Type: application/json
+
+{
+  "name": "Leanne Graham Atualizado",
+  "username": "Bret",
+  "email": "novo@email.com",
+  "phone": "1-770-736-8031",
+  "website": "hildegard.org",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": { "lat": "-37.3159", "lng": "81.1496" }
+  },
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+### Atualizar usuário (parcial)
+PATCH {{baseUrl}}/users/1/
+Content-Type: application/json
+
+{
+  "email": "leanne.novo@email.com"
+}
+
+### Deletar usuário
+DELETE {{baseUrl}}/users/1/
+
+### Posts do usuário
+GET {{baseUrl}}/users/1/posts/
+
+### Álbuns do usuário
+GET {{baseUrl}}/users/1/albums/
+
+### Tarefas do usuário
+GET {{baseUrl}}/users/1/todos/

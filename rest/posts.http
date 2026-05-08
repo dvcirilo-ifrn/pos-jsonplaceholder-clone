@@ -1,0 +1,41 @@
+@baseUrl = http://localhost:8000
+
+### Listar todos os posts
+GET {{baseUrl}}/posts/
+
+### Buscar post por ID
+GET {{baseUrl}}/posts/1/
+
+### Criar post
+POST {{baseUrl}}/posts/
+Content-Type: application/json
+
+{
+  "user": 1,
+  "title": "Meu primeiro post",
+  "body": "Este é o conteúdo do meu primeiro post na API."
+}
+
+### Atualizar post (completo)
+PUT {{baseUrl}}/posts/1/
+Content-Type: application/json
+
+{
+  "user": 1,
+  "title": "Título atualizado",
+  "body": "Conteúdo completamente substituído."
+}
+
+### Atualizar post (parcial)
+PATCH {{baseUrl}}/posts/1/
+Content-Type: application/json
+
+{
+  "title": "Só o título mudou"
+}
+
+### Deletar post
+DELETE {{baseUrl}}/posts/1/
+
+### Comentários do post
+GET {{baseUrl}}/posts/1/comments/

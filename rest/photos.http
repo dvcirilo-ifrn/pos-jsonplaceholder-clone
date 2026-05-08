@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:8000
+
+### Listar todas as fotos
+GET {{baseUrl}}/photos/
+
+### Buscar foto por ID
+GET {{baseUrl}}/photos/1/
+
+### Criar foto
+POST {{baseUrl}}/photos/
+Content-Type: application/json
+
+{
+  "album": 1,
+  "title": "Foto do pôr do sol",
+  "url": "https://via.placeholder.com/600/92c952",
+  "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+}
+
+### Atualizar foto (completo)
+PUT {{baseUrl}}/photos/1/
+Content-Type: application/json
+
+{
+  "album": 1,
+  "title": "Título atualizado",
+  "url": "https://via.placeholder.com/600/updated",
+  "thumbnailUrl": "https://via.placeholder.com/150/updated"
+}
+
+### Atualizar foto (parcial)
+PATCH {{baseUrl}}/photos/1/
+Content-Type: application/json
+
+{
+  "title": "Só o título mudou"
+}
+
+### Deletar foto
+DELETE {{baseUrl}}/photos/1/
