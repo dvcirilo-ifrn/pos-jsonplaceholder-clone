@@ -126,7 +126,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'babyAPI',
+    'TITLE': 'jsonplaceholder-clone',
     'DESCRIPTION': 'A JSONPlaceholder-compatible teaching API',
     'VERSION': '1.0.0',
 }
