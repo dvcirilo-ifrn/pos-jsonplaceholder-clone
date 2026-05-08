@@ -1,4 +1,4 @@
-# babyAPI
+# JSONPlaceholder Clone
 
 Clone da [JSONPlaceholder](https://jsonplaceholder.typicode.com) feito com Django + Django REST Framework.
 
